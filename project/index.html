@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exchange Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 m-auto">
+                <div class="calculator-container">
+<!--                    head-->
+                    <div class="head">
+                        <div class="head-logo">
+                            <img src="../data/exchange.jpg" class="logo" alt="">
+                            <h2>Exchange Calculator</h2>
+                        </div>
+                        <h2 class="show-output font-monospace" id="output">0.00</h2>
+                    </div>
+<!--                    line spacer-->
+                    <div class="line-spacer"></div>
+<!--                    calculate-->
+                    <div class="calculate-box">
+                        <form action="" class="calculate mt-3">
+                            <div class="calculate-input">
+                                <p>Input</p>
+                                <input type="number" class="form-control" id="calculateInput" min="1" autofocus required>
+                            </div>
+                            <div class="calculate-from">
+                                <p id="from">From</p>
+                                <select name="from" class="form-control"  id="calculateFrom" required>
+                                    <option value="show" disabled selected>Select Currency</option>
+                                </select>
+                            </div>
+                            <div class="calculate-to">
+                                <p id="calTo">To</p>
+                                <select name="calTo" class="form-control" id="calculateTo" required>
+                                    <option value="show" disabled>Select Currency</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg" id="calculate">Calculate</button>
+                        </form>
+                    </div>
+<!--                    history box-->
+                    <div class="history-box">
+                        <table class="history-table table table-responsive">
+                            <thead class="text-light">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody class="history-body" id="historyBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
